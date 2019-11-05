@@ -1,0 +1,27 @@
+{
+  "name": "cordova-plugin-NoticeSetting",
+  "version": "1.0.0",
+  "description": "Go to system notification settings",
+  "cordova": {
+    "id": "cordova-plugin-NoticeSetting",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hangts/cordova-plugin-NoticeSetting.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "author": "hang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hangts/cordova-plugin-NoticeSetting/issues"
+  },
+  "homepage": "https://github.com/hangts/cordova-plugin-NoticeSetting#readme"
+}
