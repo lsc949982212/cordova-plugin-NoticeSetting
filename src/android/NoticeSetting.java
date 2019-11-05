@@ -64,6 +64,6 @@ public class NoticeSetting extends CordovaPlugin {
         //     intent.setData(uri);
         //     cordova.getActivity().startActivity(intent);
         // }
-        callbackContext.success(message);
+        callbackContext.success();
     }
 }
