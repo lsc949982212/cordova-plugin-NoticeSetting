@@ -19,14 +19,13 @@ public class NoticeSetting extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("systemNoticeSetting")) {
-            String message = args.getString(0);
-            this.systemNoticeSetting(message, callbackContext);
+            this.systemNoticeSetting(callbackContext);
             return true;
         }
         return false;
     }
 
-    private void systemNoticeSetting(String message, CallbackContext callbackContext) {
+    private void systemNoticeSetting(CallbackContext callbackContext) {
         Intent intent = new Intent();
         intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
         Uri uri = Uri.fromParts("package", this.cordova.getActivity().getPackageName(), null);
