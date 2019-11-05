@@ -20,6 +20,6 @@
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml">
 		</config-file>
-		<source-file src="src/android/NoticeSetting.java" target-dir="src/cordova-plugin-NoticeSetting/NoticeSetting" />
+		<source-file src="src/android/NoticeSetting.java" target-dir="src/cordova/plugin/NoticeSetting/NoticeSetting" />
 	</platform>
 </plugin>
