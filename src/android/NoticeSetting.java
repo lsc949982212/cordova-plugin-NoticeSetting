@@ -21,6 +21,9 @@ public class NoticeSetting extends CordovaPlugin {
         if (action.equals("systemNoticeSetting")) {
             this.systemNoticeSetting(callbackContext);
             return true;
+        }else if(action.equals("securitySettings")){
+            this.actionSecuritySettings(callbackContext);
+            return true;
         }
         return false;
     }
@@ -64,6 +67,15 @@ public class NoticeSetting extends CordovaPlugin {
         //     intent.setData(uri);
         //     cordova.getActivity().startActivity(intent);
         // }
+        callbackContext.success();
+    }
+
+    private void actionSecuritySettings(CallbackContext callbackContext) {
+        Intent intent = new Intent();
+        intent.setAction(Settings.Settings.ACTION_SECURITY_SETTINGS);
+        Uri uri = Uri.fromParts("package", this.cordova.getActivity().getPackageName(), null);
+        intent.setData(uri);
+        cordova.getActivity().startActivity(intent);
         callbackContext.success();
     }
 }
