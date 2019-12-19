@@ -4,5 +4,5 @@ exports.systemNoticeSetting = function (success, error) {
     exec(success, error, 'NoticeSetting', 'systemNoticeSetting', []);
 };
 exports.securitySettings = function (success, error) {
-    //exec(success, error, 'NoticeSetting', 'securitySettings', []);
+    exec(success, error, 'NoticeSetting', 'securitySettings', []);
 };

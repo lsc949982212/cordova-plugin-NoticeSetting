@@ -10,6 +10,8 @@ import org.json.JSONException;
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.Settings;
+import android.widget.Toast;
+import java.lang.Exception;
 
 /**
  * This class echoes a string called from JavaScript.
@@ -70,12 +72,15 @@ public class NoticeSetting extends CordovaPlugin {
         callbackContext.success();
     }
 
-    private void actionSecuritySettings(CallbackContext callbackContext) {
-        Intent intent = new Intent();
-        intent.setAction(Settings.ACTION_SECURITY_SETTINGS);
-        Uri uri = Uri.fromParts("package", this.cordova.getActivity().getPackageName(), null);
-        intent.setData(uri);
-        cordova.getActivity().startActivity(intent);
-        callbackContext.success();
+    private void actionSecuritySettings(CallbackContext callbackContext) throws JSONException {
+
+        try {
+            cordova.getActivity().startActivity(new Intent(Settings.ACTION_SETTINGS));
+            //Toast.makeText(cordova.getContext(), "成功调用方法", Toast.LENGTH_SHORT).show();
+            callbackContext.success("success");
+        } catch (Exception e) {
+            e.printStackTrace();
+            callbackContext.error("failed");
+        }
     }
 }
