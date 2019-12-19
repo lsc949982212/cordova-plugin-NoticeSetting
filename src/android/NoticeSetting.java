@@ -72,7 +72,7 @@ public class NoticeSetting extends CordovaPlugin {
 
     private void actionSecuritySettings(CallbackContext callbackContext) {
         Intent intent = new Intent();
-        intent.setAction(Settings.Settings.ACTION_SECURITY_SETTINGS);
+        intent.setAction(Settings.ACTION_SECURITY_SETTINGS);
         Uri uri = Uri.fromParts("package", this.cordova.getActivity().getPackageName(), null);
         intent.setData(uri);
         cordova.getActivity().startActivity(intent);
